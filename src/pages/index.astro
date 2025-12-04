@@ -10,7 +10,90 @@
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
     </head>
+    <header>
+        <div>
+            <h1>Apriori Lex</h1>
+        </div>
+        <div>
+            <a href="test1" class="underline-link">О нас</a>
+            <a href="test1" class="underline-link">Практики</a>
+            <a href="test1" class="underline-link">Новости</a>
+            <a href="test1" class="underline-link">Контакты</a>
+        </div>
+    </header>
+    <style>
+        header {
+            background-color: #00000080;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            color: #ffffff;
+        }
+    </style>
     <body>
-        <h1>what up bruh</h1>
+        <h1>Адвокатское агенство Apriori Lex</h1>
+        <hr />
+        <div class="spaceme">
+            <a href="test1" class="underline-link">Наша спецификация</a>
+            <a href="test1" class="underline-link">Направление практики</a>
+            <a href="test1" class="underline-link">лолололо</a>
+        </div>
     </body>
+
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            background-image: url("assets/skyscrapers2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: top center;
+        }
+        header h1 {
+            padding: 0em;
+            padding-left: 1em;
+        }
+        body h1 {
+            padding: 1.5em;
+            padding-top: 30%;
+            padding-left: 13px;
+        }
+        /* ensure all link states are white and no underline */
+        .underline-link,
+        .underline-link:visited,
+        .underline-link:active,
+        .underline-link:hover {
+            color: white;
+            text-decoration: none;
+            padding-bottom: 5px;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .underline-link {
+            position: relative;
+            font-weight: bold;
+        }
+
+        .underline-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: white; /* <-- this makes the line visible */
+            transition: width 0.3s ease;
+        }
+
+        .underline-link:hover::after {
+            width: 100%;
+        }
+    </style>
+
+
 </html>
